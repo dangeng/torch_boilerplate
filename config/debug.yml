@@ -1,0 +1,18 @@
+# General
+device: 0
+num_workers: 8
+expr_name: 'debug'
+
+# Training
+epochs: 30
+lr: 1e-4
+save: false
+save_freq: 5
+
+# Data
+datadir: ''
+batch_size: 32
+shuffle: true
+
+# Test
+test_epoch: 30
