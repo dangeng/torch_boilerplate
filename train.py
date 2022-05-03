@@ -12,8 +12,9 @@ from tqdm import tqdm
 from pathlib import Path
 
 # TODO: Import models and datasets
-from util.util import AverageMeter
-from util.options import parse_args
+from utils.util import AverageMeter
+from utils.options import parse_args
+from dataset import create_dataset
 
 import pdb
 
@@ -41,8 +42,7 @@ logging.basicConfig(level=logging.DEBUG, format='[%(levelname)s] [%(asctime)s] %
 
 logging.info('Creating dataloaders')
 
-trainset = # TODO
-testset = # TODO
+trainset, testset = create_dataset(opt)
 
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=opt.batch_size,
                                           shuffle=opt.shuffle, num_workers=opt.num_workers)
